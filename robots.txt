@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://baysconeng2.github.io/main-web-leyu-com-cn/sitemap.xml
