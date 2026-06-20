@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊猫体育 · 信息索引与对照</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #1e1e1e;
+            padding: 2rem 1.25rem 4rem;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        /* 开篇短句 —— 极轻，留白呼吸 */
+        .opening {
+            margin-top: 3.2rem;
+            font-size: 1.4rem;
+            font-weight: 340;
+            letter-spacing: 0.04em;
+            color: #2b2b2b;
+            line-height: 1.4;
+            border-left: 3px solid #d4c9bc;
+            padding-left: 1.2rem;
+        }
+
+        .opening span {
+            display: block;
+            margin-top: 0.2rem;
+            font-size: 0.9rem;
+            color: #7d7570;
+            font-weight: 300;
+        }
+
+        /* 承接段落 */
+        .intro-text {
+            margin: 2.2rem 0 2.8rem;
+            font-size: 1rem;
+            color: #2e2c2a;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.3rem;
+        }
+
+        .intro-text a {
+            color: #3f3a36;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b6aaa0;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .intro-text a:hover {
+            color: #000;
+            text-decoration-color: #8a7b6e;
+        }
+
+        /* 特点列表 — 卡片式极简 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            margin: 2.6rem 0 3rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 6px 12px rgba(0,0,0,0.02);
+            border: 1px solid #efebe8;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 8px 20px rgba(0,0,0,0.02);
+        }
+
+        .feature-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #9b9089;
+            margin-bottom: 0.2rem;
+            font-weight: 500;
+        }
+
+        .feature-item .content {
+            font-size: 0.98rem;
+            color: #2b2826;
+        }
+
+        .feature-item .content strong {
+            font-weight: 570;
+            color: #1a1715;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e3ddd8;
+            font-size: 0.95rem;
+            color: #3d3936;
+        }
+
+        .closing a {
+            color: #3f3a36;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b6aaa0;
+        }
+
+        .closing a:hover {
+            color: #000;
+            text-decoration-color: #8a7b6e;
+        }
+
+        .faq-note {
+            margin-top: 1.4rem;
+            padding: 1.2rem 1.4rem;
+            background: #f2efec;
+            border-radius: 24px;
+            font-size: 0.92rem;
+            color: #2d2a27;
+        }
+
+        .faq-note summary {
+            cursor: pointer;
+            font-weight: 400;
+            color: #3d3732;
+            padding: 0.2rem 0;
+        }
+
+        .faq-note summary::marker {
+            color: #9e9087;
+        }
+
+        .faq-note p {
+            margin-top: 0.6rem;
+            line-height: 1.6;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 0.9rem 3rem;
+            }
+
+            .opening {
+                font-size: 1.2rem;
+                padding-left: 0.9rem;
+                margin-top: 2rem;
+            }
+
+            .feature-item {
+                padding: 1rem 1.2rem;
+                border-radius: 16px;
+            }
+
+            .faq-note {
+                padding: 1rem 1rem;
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- 开篇短句 -->
+        <div class="opening">
+            翻看、对照、延伸。
+            <span>—— 信息页 · 索引与备忘</span>
+        </div>
+
+        <!-- 承接段落 -->
+        <div class="intro-text">
+            <p>
+                日常想要快速检索某个体育平台的基本信息，往往要打开好几个页面来回对比。与其零散收藏，不如把核心线索整理在同一处：<a href="https://m-index-pandasports.com">熊猫体育</a> 作为其中一个常被提及的索引入口，适合在需要了解界面逻辑、赛事模块或移动端适配时作为参照起点。页面本身不提供直播或数据服务，但它的结构可以帮你快速定位后续要深入的内容。
+            </p>
+            <p>
+                如果你习惯通过观察布局来预判一个平台的使用流程，那么直接从首页的导航分区、卡片密度和文字层级入手，会比反复搜索更有效率。下面几个方向是整理笔记时经常被圈出的特点，供你对照着看。
+            </p>
+        </div>
+
+        <!-- 特点列表 -->
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="label">导航 · 分区</div>
+                <div class="content">
+                    顶部栏采用横向分类，赛事、资讯、数据入口各自独立，<strong>不堆叠下拉菜单</strong>。移动端下自动收为汉堡图标，保持界面干净。
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="label">卡片 · 信息密度</div>
+                <div class="content">
+                    首页内容以模块化卡片为主，比分、赛程、精选文章并列展示。<strong>文字与图形比例接近 1:1</strong>，避免大面积纯文字带来的视觉疲劳，也方便快速扫描。
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="label">延伸阅读 · 对照</div>
+                <div class="content">
+                    每个卡片底部通常附有“更多”链接，指向该分类的索引页。如果你在整理同类平台对比，<strong>可以从这些索引页的命名方式推测内容架构</strong>，节省自己归纳的时间。
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="label">响应式 · 适配</div>
+                <div class="content">
+                    页面在手机浏览器上优先采用单列布局，字体大小和按钮触控区域均经过适配。<strong>不需要缩放或横向滚动</strong>，适合在通勤或碎片时间快速查阅。
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 + 温和结尾 -->
+        <div class="closing">
+            <p>
+                以上整理来自日常对照记录，<a href="https://m-index-pandasports.com">熊猫体育</a> 首页的结构并不复杂，但作为索引页，它的分区方式可以帮你快速建立对同类页面的预期。如果你在查阅时发现某个模块的命名或跳转逻辑与常见模式不同，不妨将其记录下来——有时候差异点恰恰是理解设计思路的线索。
+            </p>
+
+            <details class="faq-note">
+                <summary>一些查阅时的小提示</summary>
+                <p>
+                    · 页面加载后建议先确认顶部导航是否完整渲染，部分内容依赖 JavaScript 动态插入。<br>
+                    · 卡片区域如果长时间显示加载状态，可以尝试刷新或稍后再试，与本地网络环境有关。<br>
+                    · 索引页本身不收集用户信息，但通过外链跳转后请留意目标站点的隐私说明。
+                </p>
+            </details>
+
+            <p style="margin-top: 1.8rem; font-size: 0.9rem; color: #6e645e;">
+                保持记录，保持对照。
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
