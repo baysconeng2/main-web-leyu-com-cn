@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 快速识别 · 专业体育信息聚合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #fde9d8 0%, #f9d4b0 50%, #f1c0a0 100%);
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 780px;
+            width: 100%;
+            background: #fffefc;
+            border-radius: 42px;
+            padding: 2.8rem 2.8rem 3rem;
+            box-shadow: 0 18px 40px -12px rgba(140, 80, 40, 0.36), 0 6px 14px -6px rgba(90, 50, 20, 0.12);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 22px 48px -14px rgba(130, 70, 30, 0.38);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: #b47b56;
+            background: #f6ede4;
+            padding: 0.35rem 1rem;
+            border-radius: 60px;
+            margin-bottom: 1.6rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #3b2c1f;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.02em;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5f4a36;
+            margin-bottom: 2.1rem;
+            max-width: 90%;
+            font-weight: 400;
+        }
+
+        .story-block {
+            border-left: 4px solid #e6c5ab;
+            padding-left: 1.3rem;
+            margin: 2rem 0 2rem 0;
+        }
+
+        .story-block p {
+            color: #3f3227;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.9rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.8rem;
+            margin: 2.5rem 0 2rem;
+        }
+
+        .feature-item {
+            background: #faf6f1;
+            padding: 0.9rem 1.2rem;
+            border-radius: 60px 18px 18px 60px;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.95rem;
+            color: #2b221c;
+            font-weight: 450;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .feature-item:hover {
+            background: #f1e6db;
+            transform: translateX(3px);
+        }
+
+        .feature-item::before {
+            content: "·";
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #cb9f7b;
+            line-height: 0;
+            display: inline-block;
+            margin-right: 0.1rem;
+        }
+
+        .context-line {
+            border-top: 1px solid #efe2d6;
+            padding-top: 1.8rem;
+            margin-top: 1.8rem;
+            color: #4a3b30;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .context-line a {
+            color: #865f3f;
+            text-decoration: none;
+            font-weight: 550;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color 0.18s, color 0.18s;
+            padding: 0 2px;
+        }
+
+        .context-line a:hover {
+            border-bottom-color: #b48258;
+            color: #6b4a30;
+        }
+
+        .button-soft {
+            display: inline-block;
+            margin-top: 1.1rem;
+            background: #e4cdb9;
+            color: #2f241c;
+            padding: 0.65rem 2rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.2px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: default;
+            background: #e7d3c2;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .button-soft:hover {
+            background: #dcc1ab;
+            transform: scale(1.01);
+            box-shadow: 0 4px 12px rgba(140, 80, 35, 0.15);
+        }
+
+        .faq-note {
+            margin-top: 2.2rem;
+            padding: 1.2rem 1.4rem;
+            background: #f8f0e9;
+            border-radius: 28px;
+            font-size: 0.9rem;
+            color: #3b2e25;
+            border: 1px solid #eddccc;
+        }
+
+        .faq-note strong {
+            color: #7a5b41;
+            font-weight: 600;
+        }
+
+        .faq-note span {
+            display: block;
+            margin-top: 0.35rem;
+            color: #5e4b3b;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 2rem 1.5rem 2rem;
+                border-radius: 32px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .lead {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .feature-item {
+                border-radius: 40px 12px 12px 40px;
+            }
+            .story-block {
+                margin: 1.5rem 0;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hero-tag">体育信息 · 一览聚焦</div>
+        <h1>MK体育 · 用途识别<br>从第一眼开始</h1>
+        <p class="lead">你打开一个页面，几秒内就要判断：这里提供什么？值不值得停留？<br><strong>MK体育</strong> 的构建思路正是围绕这一瞬间——让访问者快速定位体育内容核心。</p>
+
+        <div class="story-block">
+            <p>「我是来找赛事动态的，还是看数据参考的？」——这是大多数用户进入体育站点时的内心问题。<br>
+            MK体育的设计逻辑，就是让答案浮现在页面呼吸之间。没有过度包装，没有复杂导航迷宫，而是以信息密度和结构清晰度，直接回应用户对「这是什么网站」的快速识别需求。</p>
+            <p>从聚合体育资讯到内容分区提示，每个元素都服务于同一个目标：让体育爱好者在最短阅读路径内，确认这里与自己的兴趣匹配。</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">内容主题一目了然</div>
+            <div class="feature-item">赛事分类区隔清晰</div>
+            <div class="feature-item">信息层级无冗余</div>
+            <div class="feature-item">视觉引导自然流畅</div>
+        </div>
+
+        <div class="context-line">
+            如果你正在寻找一个能直接切入体育信息、减少试错成本的站点，<a href="https://page--mksports.com">MK体育</a> 提供了一种克制的聚合视角。它的页面节奏以实用为先，不夸大、不堆砌，适合日常快速浏览与信息筛选。
+        </div>
+
+        <div class="faq-note">
+            <strong>❓ 常见识别点</strong>
+            <span>→ 站点是否围绕体育赛事 / 动态 / 参考构建？ 是。</span>
+            <span>→ 内容是否带有明确分类或标签提示？ 是，结构可辨。</span>
+            <span>→ 整体叙述是否克制、无诱导感？ 是，信息与界面匹配。</span>
+        </div>
+
+        <a class="button-soft" href="https://page--mksports.com" target="_blank" rel="noopener noreferrer">MK体育</a>
+        <span style="display: block; margin-top: 1.2rem; font-size: 0.75rem; color: #9c8572; letter-spacing: 0.3px;">—— 温和引导 · 自主判断</span>
+    </div>
+</body>
+</html>
